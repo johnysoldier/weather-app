@@ -30,6 +30,14 @@
         </template>
       </ul>
     </div>
+    <div class="flex flex-col gab-4">
+      <Suspense>
+        <CilyList />
+        <template #fallback>
+          <p>Loading...</p>
+        </template>
+      </Suspense>
+    </div>
   </main>
 </template>
 
@@ -37,6 +45,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import CilyList from "../components/CilyList.vue";
 
 const mapboxAPIKey =
   "pk.eyJ1Ijoiam9obnlzb2xkaWVyIiwiYSI6ImNsZDhxc2lueDAxbWEzdW9mejI3NWRxMWIifQ.L1GH4tf60b83oV4B1YP97g";
