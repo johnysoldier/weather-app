@@ -72,7 +72,7 @@ const route = useRoute();
 const router = useRouter();
 const addCity = () => {
   if (localStorage.getItem("savedCities")) {
-    savedCities.value = JSON.parse.localStorage.getItem("savedCities");
+    savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
   }
 
   const locationObj = {

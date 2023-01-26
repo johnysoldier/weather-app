@@ -34,7 +34,7 @@
       <Suspense>
         <CilyList />
         <template #fallback>
-          <p>Loading...</p>
+          <CityCardSkeleton />
         </template>
       </Suspense>
     </div>
@@ -46,6 +46,7 @@ import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
 import CilyList from "../components/CilyList.vue";
+import CityCardSkeleton from "../components/CityCardSkeleton.vue";
 
 const mapboxAPIKey =
   "pk.eyJ1Ijoiam9obnlzb2xkaWVyIiwiYSI6ImNsZDhxc2lueDAxbWEzdW9mejI3NWRxMWIifQ.L1GH4tf60b83oV4B1YP97g";
